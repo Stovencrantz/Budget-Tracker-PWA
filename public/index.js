@@ -30,6 +30,7 @@ function populateTable() {
 
   transactions.forEach(transaction => {
     // create and populate a table row
+    console.log("transaction name: ". transaction.name);
     let tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${transaction.name}</td>
@@ -50,6 +51,7 @@ function populateChart() {
     let date = new Date(t.date);
     return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
   });
+  console.log("labels: ", labels);
 
   // create incremental values for chart
   let data = reversed.map(t => {
@@ -98,6 +100,8 @@ function sendTransaction(isAdding) {
     value: amountEl.value,
     date: new Date().toISOString()
   };
+  
+  console.log("transaction: ", transaction);
 
   // if subtracting funds, convert amount to negative number
   if (!isAdding) {
@@ -121,7 +125,8 @@ function sendTransaction(isAdding) {
       "Content-Type": "application/json"
     }
   })
-  .then(response => {    
+  .then(response => {   
+    console.log("/api/transaction res: ", response); 
     return response.json();
   })
   .then(data => {
