@@ -30,7 +30,7 @@ function populateTable() {
 
   transactions.forEach(transaction => {
     // create and populate a table row
-    console.log("transaction name: ". transaction.name);
+    console.log("transaction name: ", transaction.name);
     let tr = document.createElement("tr");
     tr.innerHTML = `
       <td>${transaction.name}</td>
