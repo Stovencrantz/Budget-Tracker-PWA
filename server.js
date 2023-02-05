@@ -15,11 +15,9 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.BUTTERCUP || "mongodb://localhost/budget", {
+mongoose.connect(process.env.BUTTERCUP || "mongodb://127.0.0.1:27017/budget", {
   useNewUrlParser: true,
-  useCreateIndex: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
 });
 
 // routes

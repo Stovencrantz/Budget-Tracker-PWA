@@ -20,9 +20,9 @@
   "homepage": "https://github.com/Stovencrantz/Budget-Tracker-PWA#readme",
   "dependencies": {
     "compression": "^1.7.4",
-    "express": "^4.17.1",
-    "lite-server": "^2.5.4",
-    "mongoose": "^5.10.5",
+    "express": "^4.18.2",
+    "lite-server": "^2.6.1",
+    "mongoose": "^6.9.0",
     "morgan": "^1.10.0"
   }
 }
